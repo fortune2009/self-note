@@ -1,0 +1,76 @@
+.Searchbar {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.Searchbar-bar {
+    background: #FFFFFF;
+    border: 1px solid #FA9F5E;
+    box-sizing: border-box;
+    border-radius: 20px;  
+    height: 40px;  
+    box-shadow: 0 8px 6px -10px #000000;
+
+}
+
+
+.Note {
+    background-color: None;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+    
+    
+}
+
+.Note-flex {
+    display: -ms-inline-grid;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+
+    /* -webkit-box-shadow: 0 35px 20px #fa9f5e;
+    -moz-box-shadow: 0 8px 6px -10px#FA9F5E; */
+    box-shadow: 0 8px 6px -8px#FA9F5E;
+}
+
+.Note-flex-item-title {
+    order: 0;    
+    font-size: 18px;
+    line-height: 23px;
+    
+    color: #000000;    
+}
+
+.Note-flex-item-desc {
+    order: 1;    
+}
+
+.Note-flex-timeStamp {
+    order: 3;
+    width: 90px;
+    height: 25px;
+    left: 32px;
+    background: #FA9F5E;
+    border-radius: 25px;
+    margin-bottom: 25px;
+
+    /* font-family: Roboto;
+    font-style: normal;
+    font-weight: normal; */
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+}
+
+.Note-flex-time {
+    order:3;
+}

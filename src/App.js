@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+// import logo from './logo.svg';
+import SignUp from './component/UserDetails/SignUp';
+import Login from './component/UserDetails/Login';
 import './App.css';
+import SearchApp from './component/search/SearchApp';
 
 function App() {
+
+  const [appState, setAppState] = useState({
+    isRegistered: false
+  })
+
+  useEffect(() => {
+    const localUser = JSON.parse(sessionStorage.getItem("user"))
+
+    if(localUser !== null) {
+      setAppState(
+        {
+          isRegistered: true
+        }
+      )
+    }
+    else{
+
+    }
+    console.log(localUser)
+    console.log("localUser:",localUser)
+    // sessionStorage.removeItem("user")
+  }, [appState])
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* {!appState.isRegistered?<SignUp/>:null}
+      {appState.isRegistered?<Login/>:null} */}
+      <SearchApp/>
     </div>
   );
 }
