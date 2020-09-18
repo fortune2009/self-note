@@ -26,14 +26,14 @@ function App() {
     }
     console.log(localUser)
     console.log("localUser:",localUser)
-    // sessionStorage.removeItem("user")
+    sessionStorage.removeItem("user")
   }, [appState])
   
 
   return (
     <div className="App">
-      {/* {!appState.isRegistered?<SignUp/>:null}
-      {appState.isRegistered?<Login/>:null} */}
+      {/* {!appState.isRegistered?<SignUp/>:null} */}
+      {/* {appState.isRegistered?<Login/>:null} */}
       <SearchApp/>
     </div>
   );

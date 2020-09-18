@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Note from './Note';
 import Searchbar from './Searchbar';
+import add_button from './icons/svg/iPhone 11 Pro/add_button.svg';
 
 const SearchApp = () => {
     const date = new Date();
@@ -36,9 +37,10 @@ const SearchApp = () => {
     return (
         <div>            
             <p>Notes by {}</p>
+            <div className="Linestrips"></div>
             <Searchbar search={search} setSearch={setSearch} />
             <Note notes={filteredNotes} />
-            <button>Add Note</button>
+            <img type="button" onClick={onChangeHandle} src={add_button}/>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 .Searchbar {
     color: white;
+    margin-top: 12px;
     margin-bottom: 50px;
 }
 
@@ -11,6 +12,11 @@
     height: 40px;  
     box-shadow: 0 8px 6px -10px #000000;
 
+}
+
+.Linestrips {
+    border: 1px solid #FB6900;    
+    /* border: 1px solid #FB6900; */
 }
 
 
