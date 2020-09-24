@@ -34,13 +34,23 @@ const SearchApp = () => {
         return note.title.toLowerCase().includes(search.toLowerCase())
     })
 
+    const onChangeHandle= ()=>{
+        console.log("checker")
+    }
+
     return (
         <div>            
             <p>Notes by {}</p>
             <div className="Linestrips"></div>
+            <div>
             <Searchbar search={search} setSearch={setSearch} />
             <Note notes={filteredNotes} />
-            <img type="button" onClick={onChangeHandle} src={add_button}/>
+            <div>
+                <span>
+                    <img type="button" onClick={onChangeHandle} src={add_button} alt="icon"/>
+                </span> 
+            </div>
+            </div>
         </div>
     );
 }

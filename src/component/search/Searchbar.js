@@ -7,7 +7,7 @@ const Searchbar = ({search,setSearch}) => {
     }
     return (
         <div className="Searchbar">
-            <input placeHolder="Search..." className="Searchbar-bar" onChange={onChangeHandler} />
+            <input placeholder="Search..." className="Searchbar-bar" onChange={onChangeHandler} />
         </div>
     );
 }

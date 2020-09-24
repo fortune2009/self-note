@@ -5,7 +5,7 @@ import book from './icons/Svg/book.png';
 import DevNote from './icons/Svg/DevNote.svg';
 import undraw_book from './icons/Svg/undraw_book.png';
 
-const SignUp =()=>{
+const SignUp=()=>{
     const [formData, setformData] = useState()
 
     const onChangeHandler =(e)=>{
@@ -19,7 +19,8 @@ const SignUp =()=>{
         if(formData === undefined){
             alert("Please enter Email address to sign up!")
         }else{
-            sessionStorage.setItem("user", JSON.stringify([formData]))
+            localStorage.setItem("user", JSON.stringify([formData]))
+            // sessionStorage.setItem("user", JSON.stringify([formData]))
         }
     }
     return(

@@ -12,7 +12,8 @@ function App() {
   })
 
   useEffect(() => {
-    const localUser = JSON.parse(sessionStorage.getItem("user"))
+    // const localUser = JSON.parse(sessionStorage.getItem("user"))
+    const localUser = JSON.parse(localStorage.getItem("user"))
 
     if(localUser !== null) {
       setAppState(
@@ -24,16 +25,16 @@ function App() {
     else{
 
     }
-    console.log(localUser)
+    // console.log(localUser)
     console.log("localUser:",localUser)
-    sessionStorage.removeItem("user")
-  }, [appState])
+    // localStorage.removeItem("user")
+  }, []);
   
 
   return (
     <div className="App">
-      {/* {!appState.isRegistered?<SignUp/>:null} */}
-      {/* {appState.isRegistered?<Login/>:null} */}
+      {!appState.isRegistered?<SignUp/>:null}
+      {appState.isRegistered?<Login/>:null}
       <SearchApp/>
     </div>
   );
